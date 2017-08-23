@@ -11,7 +11,7 @@ body {
 
   height: 100vh;
 
-  font-family: monospace;
+  font-family: courier;
   background-color: lightblue;
   text-align: center;
 }
@@ -23,4 +23,7 @@ button {
 
 img {
   max-width: 60%;
+}
+ul{
+list-style: none;
 }
