@@ -58,7 +58,7 @@ var pickOnClick = function (event) {
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
-      cur = 0;
+      cur = 5;
       choice.innerText = rand;
       return;
     }
