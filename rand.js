@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i=0; i<students.length; i++) {
     let li = document.createElement('li');
     li.innerText = students[i];
-//     aList.append(li);
+    aList.append(li);
   }
 });
 
