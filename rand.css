@@ -30,6 +30,9 @@ h1{
 }
 ul{
 list-style: none;
+}
+li{
+font-style: italic;
 font-family: impact;
 }
 
