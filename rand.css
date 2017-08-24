@@ -25,6 +25,9 @@ img {
   max-width: 60%;
   border-radius: 50%;
 }
+h1{
+  font-family: impact;
+}
 ul{
 list-style: none;
 }
