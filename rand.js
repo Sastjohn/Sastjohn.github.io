@@ -33,6 +33,7 @@ var colors = [
 var cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
+  Debugger;
   console.log('hello rand.js');
 
   body = document.getElementById('body');
