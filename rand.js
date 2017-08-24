@@ -35,11 +35,11 @@ var cur = 0;
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hello rand.js');
 
-//   body = document.getElementById('body');
-//   header = document.getElementById('header');
-//   pickButton = document.getElementById('pickButton');
-//   choice = document.getElementById('choice');
-//   aList = document.getElementById('aList');
+  body = document.getElementById('body');
+  header = document.getElementById('header');
+  pickButton = document.getElementById('pickButton');
+  choice = document.getElementById('choice');
+  aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let i=0; i<students.length; i++) {
     let li = document.createElement('li');
     li.innerText = students[i];
-    aList.append(li);
+//     aList.append(li);
   }
 });
 
