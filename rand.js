@@ -33,14 +33,13 @@ var colors = [
 var cur = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
-  debugger;
   console.log('hello rand.js');
 
-  body = document.getElementById('body');
-  header = document.getElementById('header');
-  pickButton = document.getElementById('pickButton');
-  choice = document.getElementById('choice');
-  aList = document.getElementById('aList');
+//   body = document.getElementById('body');
+//   header = document.getElementById('header');
+//   pickButton = document.getElementById('pickButton');
+//   choice = document.getElementById('choice');
+//   aList = document.getElementById('aList');
 
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
