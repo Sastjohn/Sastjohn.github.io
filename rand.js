@@ -68,8 +68,8 @@ var pickOnClick = function (event) {
   }, 200);
 }
 
-// var aListOnClick = function (event) {
-//   if (event.target.tagName === 'LI') {
-//     event.target.style.textDecoration = 'line-through';
-//   }
-// }
+var aListOnClick = function (event) {
+  if (event.target.tagName === 'LI') {
+    event.target.style.textDecoration = 'line-through';
+  }
+}
