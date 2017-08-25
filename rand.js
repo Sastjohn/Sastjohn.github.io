@@ -22,7 +22,7 @@ var students = [
   "Shonica",
   "Krystal"
 ];
-
+var selectedStudents = []
 var colors = [
   'hotpink',
   'orange',
