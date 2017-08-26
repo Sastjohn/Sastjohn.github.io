@@ -22,7 +22,7 @@ var students = [
   ["Shonica", false],
   ["Krystal", false]
 ];
-var selectedStudents = []
+
 var colors = [
   'hotpink',
   'orange',
@@ -31,6 +31,7 @@ var colors = [
   'black'
 ];
 var cur = 0;
+var studentCount = students.length;
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('hello rand.js');
@@ -43,17 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
+  document.getElementById('pairsButton').addEventListener('click', pairsOnClick);
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
     let li = document.createElement('li');
-    li.innerText = students[i];
+    li.innerText = students[i][0];
     aList.append(li);
   }
 });
 
 var pickOnClick = function (event) {
-  var studentCount = students.length;
   choice.innerHTML = '&nbsp;'
   var rand = students[Math.floor(Math.random() * students.length)];
   var x = window.setInterval(() => {
@@ -70,8 +71,36 @@ var pickOnClick = function (event) {
           choice.innerText = "All Students Picked!";
       return;
     }
+    if (colors[cur]) header.style.color = colors[cur];
+    if (colors[cur-1]) body.style.backgroundColor = colors[cur-1];
+    cur += 1;
+  }, 200);
+}
+
+var removeClicked=function(studentName)
+  {
+     let student = students.find(s => s[0] === studentName);
+       if(student !== undefined)
+       {
+         student[1]= true;
+       }
+  }
+
 var aListOnClick = function (event) {
   if (event.target.tagName === 'LI') {
-    event.target.style.textDecoration = 'line-through';
+    event.target.style.textDecoration = 'line-through';  
+    removeClicked(event.target.innerText);
   }
+}
+
+  var pairsOnClick = function (event) {
+   var pair = students[Math.floor(Math.random() * students.length)][0];
+     pair + " | " + students[Math.floor(Math.random() * students.length)][0];
+
+    if(pair !== '' )
+    {
+      choice.innerText = pair;
+     }
+
+        pair = '';
 }
