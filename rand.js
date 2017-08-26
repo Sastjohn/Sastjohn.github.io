@@ -56,15 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students[Math.floor(Math.random() * students.length)];
+  var randstudent = students[Math.floor(Math.random() * students.length)];
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
       cur = 0;
-      if(!rand[1])
+      if(!randstudent[1])
        {
            choice.innerText = rand[0];
-           rand[1] =true;
+           randstudent[1] =true;
            studentCount--;
        }
       if(studentCount <= 0 )
