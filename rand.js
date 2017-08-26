@@ -53,18 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 var pickOnClick = function (event) {
- choice.innerHTML = '&nbsp;'
- var rand = Math.floor(Math.random() * students.length);
- var randomStudent = students[rand];
-
- while (selectedStudents.includes(randomStudent)) {
-   console.log('student already in selected students');
-   rand = Math.floor(Math.random() * students.length);
-   randomStudent = students[rand];
- }
- selectedStudents.push(randomStudent);
- var x = window.setInterval(updatePage.call(randomStudent), 200);
-}
+  var studentCount = students.length;
+  choice.innerHTML = '&nbsp;'
+  var rand = students[Math.floor(Math.random() * students.length)];
+  var x = window.setInterval(() => {
+    if (colors[cur] === undefined) {
+      window.clearInterval(x);
+      cur = 0;
+      if(!rand[1])
+       {
+           choice.innerText = rand[0];
+           rand[1] =true;
+           studentCount--;
+       }
+      if(studentCount <= 0 )
+          choice.innerText = "All Students Picked!";
+      return;
+    }
 var aListOnClick = function (event) {
   if (event.target.tagName === 'LI') {
     event.target.style.textDecoration = 'line-through';
