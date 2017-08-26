@@ -63,7 +63,7 @@ var pickOnClick = function (event) {
       cur = 0;
       if(!randstudent[1])
        {
-           choice.innerText = rand[0];
+           choice.innerText = randstudet[0];
            randstudent[1] =true;
            studentCount--;
        }
