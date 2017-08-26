@@ -5,22 +5,22 @@ var choice;
 var aList;
 
 var students = [
-  "Kevin",
-  "Jonathan",
-  "Angel",
-  "Eric",
-  "Janette",
-  "Desmond",
-  "Ashiya",
-  "Monica",
-  "Susana",
-  "Deborah",
-  "Thomas",
-  "Julissa",
-  "Kyla",
-  "John",
-  "Shonica",
-  "Krystal"
+  ["Kevin", false],
+  ["Jonathan", false],
+  ["Angel", false],
+  ["Eric", false],
+  ["Janette", false],
+  ["Desmond", false],
+  ["Ashiya", false],
+  ["Monica", false],
+  ["Susana", false],
+  ["Deborah", false],
+  ["Thomas", false],
+  ["Julissa", false],
+  ["Kyla", false],
+  ["John", false],
+  ["Shonica", false],
+  ["Krystal", false]
 ];
 var selectedStudents = []
 var colors = [
