@@ -22,13 +22,27 @@ var students = [
   ["Shonica", false],
   ["Krystal", false]
 ];
-
+var randTitles =[
+  'the Strong',
+  'The Codess',
+  'Conquer of Code',
+  'The Script Slayer',
+  'The Function Keyer',
+  'The Javascript Joker',
+  'The function Flexer',
+  'The king of development',
+  'The Developer Queen',
+  'The Web of type',
+  'The Quarter Callbacker',
+  'the Sorceress of all Elements',
+]
 var colors = [
   'hotpink',
   'orange',
-  'fuchsia', 0,
-  'lightblue', 0,
+  'fuchsia',
+ '#ffd700',
   'black'
+
 ];
 var cur = 0;
 var studentCount = students.length;
@@ -57,13 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
   var rand = students[Math.floor(Math.random() * students.length)];
+  var randTitle = randTitles[Math.floor(Math.random()* randTitles.length)];
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
+      // body.style.backgroundColor = '#ffd700';
       window.clearInterval(x);
       cur = 0;
-      if(!rand[1])
-       {
-           choice.innerText = rand[0];
+      if(!rand[1]){
+          if(rand[0].length % 2 === 0){
+            choice.innerText = rand[0] + '!' + ' ' + randTitle
+          } else {
+           choice.innerText = rand[0].toUpperCase() + ' ' + randTitle;
+          }
+         
            rand[1] =true;
            studentCount--;
        }
@@ -94,13 +114,14 @@ var aListOnClick = function (event) {
 }
 
   var pairsOnClick = function (event) {
-   var pair = students[Math.floor(Math.random() * students.length)][0];
-   pair += " | " + students[Math.floor(Math.random() * students.length)][0];
+   var pair = students[Math.floor(Math.random() * students.length)][0].toUpperCase();
+   pair += " | " + students[Math.floor(Math.random() * students.length)][0].toUpperCase();
    console.log(pair);
     if(pair !== '' )
     {
       choice.innerText = pair;
      }
 
-        pair = '';
-}
+
+//         pair = '';
+// }
