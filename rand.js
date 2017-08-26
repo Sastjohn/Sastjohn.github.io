@@ -42,9 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   choice = document.getElementById('choice');
   aList = document.getElementById('aList');
 
+
   pickButton.addEventListener('click', pickOnClick );
   aList.addEventListener('click', aListOnClick );
-  document.getElementById('pairsButton').addEventListener('click', pairsOnClick);
+  document.getElementById('alertPick').addEventListener('click', alertPick);
+//   document.getElementById('pairsButton').addEventListener('click', pairsOnClick);
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
@@ -93,14 +95,14 @@ var aListOnClick = function (event) {
   }
 }
 
-  var pairsOnClick = function (event) {
-   var pair = students[Math.floor(Math.random() * students.length)][0];
-   pair += " | " + students[Math.floor(Math.random() * students.length)][0];
-   console.log(pair);
-    if(pair !== '' )
-    {
-      choice.innerText = pair;
-     }
+//   var pairsOnClick = function (event) {
+//    var pair = students[Math.floor(Math.random() * students.length)][0];
+//    pair += " | " + students[Math.floor(Math.random() * students.length)][0];
+//    console.log(pair);
+//     if(pair !== '' )
+//     {
+//       choice.innerText = pair;
+//      }
 
-        pair = '';
-}
+//         pair = '';
+// }
