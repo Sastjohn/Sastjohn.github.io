@@ -11,9 +11,11 @@ body {
 
   height: 100vh;
 
-  font-family: monospace;
   background-color: lightblue;
   text-align: center;
+}
+h1{
+  font-family: impact;
 }
 
 button {
@@ -23,6 +25,7 @@ button {
 
 img {
   max-width: 60%;
+  border-radius: 50%;
 }
 ul{
   list-style-type: none;
